@@ -1867,11 +1867,30 @@ h2 {
   }
 
   h1 {
-    font-size: 3rem;
+    max-width: 11ch;
+    font-size: clamp(4.15rem, 18vw, 5.8rem);
+    line-height: 0.96;
+    font-weight: 800;
   }
 
   .hero::before {
     display: none;
+  }
+
+  .hero {
+    padding-top: 78px;
+    padding-bottom: 92px;
+  }
+
+  .hero-text {
+    max-width: 34ch;
+    margin-top: 28px;
+    font-size: 1.08rem;
+    line-height: 1.52;
+  }
+
+  .hero-actions {
+    margin-top: 38px;
   }
 
   .skill-panel-portal {
