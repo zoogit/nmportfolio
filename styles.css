@@ -266,7 +266,7 @@ h1 {
 }
 
 .statement-puzzle-wrap .hero-puzzle {
-  width: min(36vw, 520px);
+  width: min(100%, 520px);
 }
 
 .hero-puzzle {
@@ -371,7 +371,7 @@ h1 {
 .statement-band {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(340px, 520px);
+  grid-template-columns: minmax(0, 65fr) minmax(320px, 35fr);
   align-items: center;
   column-gap: clamp(28px, 4.5vw, 76px);
   padding: clamp(54px, 8vw, 86px) var(--page-margin) clamp(56px, 7vw, 92px);
@@ -387,14 +387,26 @@ h1 {
   line-height: 1.18;
 }
 
+.skill-breakdown-label {
+  grid-column: 1 / -1;
+  margin: clamp(40px, 6vw, 70px) 0 0;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: clamp(0.86rem, 1.1vw, 1rem);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .statement-dots {
   grid-column: 1 / -1;
   display: flex;
+  justify-content: space-between;
   gap: clamp(28px, 4vw, 48px);
-  margin-top: clamp(40px, 6vw, 70px);
+  width: 100%;
+  margin-top: 18px;
 }
 
 .statement-link {
+  flex: 1 1 0;
   display: inline-flex;
   align-items: center;
   gap: 0;
@@ -676,7 +688,7 @@ h1 {
 
 @media (min-width: 1500px) {
   .statement-band {
-    grid-template-columns: minmax(0, 1060px) minmax(360px, 520px);
+    grid-template-columns: minmax(0, 65fr) minmax(360px, 35fr);
     justify-content: start;
   }
 }
@@ -701,6 +713,7 @@ h1 {
 }
 
 .logo-tab {
+  position: relative;
   min-height: auto;
   display: inline-flex;
   align-items: center;
@@ -716,9 +729,25 @@ h1 {
   cursor: pointer;
 }
 
+.logo-tab::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -35px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--soft), var(--warm), var(--highlight), var(--navy));
+  transform: translateX(-50%);
+  transition: width 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 .logo-tab.is-active,
 .logo-tab:hover {
   color: var(--ink);
+}
+
+.logo-tab.is-active::after {
+  width: min(100%, 112px);
 }
 
 .logo-shape {
@@ -783,7 +812,7 @@ h1 {
   line-height: 1;
   opacity: 1;
   filter: grayscale(1);
-  transition: filter 700ms ease;
+  transition: filter 700ms ease, transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .client-name {
@@ -801,12 +830,14 @@ h1 {
 .logo-tab:focus-visible .client-logo img,
 .logo-tab.is-active .client-logo img {
   filter: grayscale(0);
+  transform: translateY(-4px);
 }
 
 .logo-tab:hover .client-logo-more span,
 .logo-tab:focus-visible .client-logo-more span,
 .logo-tab.is-active .client-logo-more span {
   filter: grayscale(0);
+  transform: translateY(-4px);
 }
 
 .logo-tab:hover .client-name,
@@ -1749,6 +1780,14 @@ h2 {
 
   .statement-band p {
     max-width: 1280px;
+  }
+
+  .statement-dots {
+    justify-content: flex-start;
+  }
+
+  .statement-link {
+    flex: 0 0 auto;
   }
 
   .project-card {
