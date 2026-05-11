@@ -306,8 +306,9 @@ if (heroPuzzle && puzzlePieces.length) {
   puzzlePieces.forEach((piece, index) => {
     const [x, y, width, height] = puzzleLayout[index] || [0, 0, 18, 18];
     const [gridX, gridY] = manualGridOverrides[index] || shuffledGrid[shuffleOrder[index]] || [0, 0];
-    const scatterX = gridX - x;
-    const scatterY = gridY - y;
+    const scatterSpread = 1.18;
+    const scatterX = (gridX - x) * scatterSpread;
+    const scatterY = (gridY - y) * 1.08;
     const rotate = ((index % 7) - 3) * 2.6;
 
     piece.setAttribute('role', 'button');
