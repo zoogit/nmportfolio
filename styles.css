@@ -2068,6 +2068,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 
+  .freelance-gallery {
+    gap: 18px;
+  }
+
   .travel-visual > *,
   .hl-visual > *,
   .beer-visual > *,
