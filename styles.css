@@ -734,8 +734,8 @@ h1 {
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 0;
-  border-bottom: 9px solid var(--highlight);
+  border-top: 9px solid var(--highlight);
+  border-bottom: 0;
   opacity: 0;
   transform: translateX(-50%) translateY(-4px);
   transition: opacity 320ms ease, transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
