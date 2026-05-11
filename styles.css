@@ -251,7 +251,7 @@ h1 {
 }
 
 .hero-project-screen {
-  height: clamp(360px, 42vw, 620px);
+  height: clamp(460px, 48vw, 720px);
   padding: clamp(10px, 1.2vw, 16px);
   background: #ffffff;
   overflow: hidden;
@@ -627,7 +627,7 @@ h1 {
 }
 
 .skill-panel-portal {
-  height: clamp(340px, 34vw, 500px);
+  height: clamp(460px, 40vw, 660px);
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.62);
   background: #ffffff;
@@ -1875,7 +1875,7 @@ h2 {
   }
 
   .skill-panel-portal {
-    height: 560px;
+    height: 680px;
   }
 
   .pixel-grid {
@@ -2000,7 +2000,7 @@ h2 {
   }
 
   .skill-panel-portal {
-    height: 620px;
+    height: 720px;
   }
 
   .hero-puzzle {
