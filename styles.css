@@ -390,23 +390,19 @@ h1 {
 .skill-breakdown-label {
   grid-column: 1 / -1;
   margin: clamp(40px, 6vw, 70px) 0 0;
-  color: rgba(255, 255, 255, 0.76);
-  font-size: clamp(0.86rem, 1.1vw, 1rem);
-  font-weight: 900;
-  text-transform: uppercase;
+  color: #000000;
+  font-size: clamp(0.78rem, 0.95vw, 0.92rem);
+  font-weight: 600;
 }
 
 .statement-dots {
   grid-column: 1 / -1;
   display: flex;
-  justify-content: space-between;
   gap: clamp(28px, 4vw, 48px);
-  width: 100%;
   margin-top: 18px;
 }
 
 .statement-link {
-  flex: 1 1 0;
   display: inline-flex;
   align-items: center;
   gap: 0;
@@ -729,16 +725,20 @@ h1 {
   cursor: pointer;
 }
 
-.logo-tab::after {
+.client-logo::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -35px;
+  bottom: -21px;
   width: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--soft), var(--warm), var(--highlight), var(--navy));
-  transform: translateX(-50%);
-  transition: width 520ms cubic-bezier(0.16, 1, 0.3, 1);
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 0;
+  border-bottom: 9px solid var(--highlight);
+  opacity: 0;
+  transform: translateX(-50%) translateY(-4px);
+  transition: opacity 320ms ease, transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .logo-tab.is-active,
@@ -746,8 +746,9 @@ h1 {
   color: var(--ink);
 }
 
-.logo-tab.is-active::after {
-  width: min(100%, 112px);
+.logo-tab.is-active .client-logo::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
 }
 
 .logo-shape {
@@ -763,6 +764,7 @@ h1 {
 }
 
 .client-logo {
+  position: relative;
   width: clamp(64px, 6vw, 88px);
   height: clamp(64px, 6vw, 88px);
   display: grid;
