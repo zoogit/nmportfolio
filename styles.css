@@ -49,7 +49,7 @@ a {
 
 .site-header.is-colored {
   color: #ffffff;
-  background: var(--red);
+  background: #000000;
 }
 
 .brand {
