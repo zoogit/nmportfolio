@@ -261,7 +261,7 @@ h1 {
 
 .statement-puzzle-wrap {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   margin: 0;
 }
 
@@ -371,16 +371,16 @@ h1 {
 .statement-band {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 65fr) minmax(320px, 35fr);
+  grid-template-columns: minmax(0, 70fr) minmax(300px, 30fr);
   align-items: center;
-  column-gap: clamp(28px, 4.5vw, 76px);
+  column-gap: clamp(18px, 3vw, 52px);
   padding: clamp(54px, 8vw, 86px) var(--page-margin) clamp(56px, 7vw, 92px);
   color: #ffffff;
   background: var(--red);
 }
 
 .statement-band p {
-  max-width: 1040px;
+  max-width: 1180px;
   margin: 0;
   font-size: clamp(2.1rem, 5vw, 4.1rem);
   font-weight: 300;
@@ -684,7 +684,7 @@ h1 {
 
 @media (min-width: 1500px) {
   .statement-band {
-    grid-template-columns: minmax(0, 65fr) minmax(360px, 35fr);
+    grid-template-columns: minmax(0, 70fr) minmax(340px, 30fr);
     justify-content: start;
   }
 }
