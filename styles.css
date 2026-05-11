@@ -252,6 +252,7 @@ h1 {
 
 .hero-project-screen {
   height: clamp(360px, 42vw, 620px);
+  padding: clamp(10px, 1.2vw, 16px);
   background: #ffffff;
   overflow: hidden;
 }
