@@ -265,12 +265,13 @@ h1 {
 
 .statement-puzzle-wrap {
   display: flex;
+  align-self: start;
   justify-content: flex-start;
   margin: 0;
 }
 
 .statement-puzzle-wrap .hero-puzzle {
-  width: min(100%, 520px);
+  width: min(100%, 440px);
 }
 
 .hero-puzzle {
@@ -375,9 +376,9 @@ h1 {
 .statement-band {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(320px, 34fr) minmax(0, 66fr);
-  align-items: center;
-  column-gap: clamp(20px, 3vw, 48px);
+  grid-template-columns: minmax(300px, 0.38fr) minmax(0, 0.62fr);
+  align-items: start;
+  column-gap: clamp(34px, 5vw, 88px);
   padding: clamp(54px, 8vw, 86px) var(--page-margin) clamp(56px, 7vw, 92px);
   color: #ffffff;
   background: var(--red);
@@ -385,7 +386,7 @@ h1 {
 
 .statement-band p {
   grid-column: 2;
-  max-width: 1110px;
+  max-width: 980px;
   margin: 0;
   font-size: clamp(2.1rem, 5vw, 4.1rem);
   font-weight: 300;
@@ -689,8 +690,8 @@ h1 {
 
 @media (min-width: 1500px) {
   .statement-band {
-    grid-template-columns: minmax(360px, 34fr) minmax(0, 66fr);
-    justify-content: start;
+    grid-template-columns: minmax(320px, 440px) minmax(0, 980px);
+    justify-content: space-between;
   }
 }
 
