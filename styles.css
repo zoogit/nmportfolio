@@ -1849,6 +1849,10 @@ h2 {
     max-width: 1280px;
   }
 
+  .skill-breakdown-label {
+    margin-top: 64px;
+  }
+
   .statement-dots {
     justify-content: flex-start;
   }
