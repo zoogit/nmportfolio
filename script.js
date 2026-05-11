@@ -242,6 +242,69 @@ document.querySelectorAll('.website-portal').forEach((portal) => {
   }
 });
 
+const imageViewer = document.querySelector('#image-viewer');
+const imageViewerImage = imageViewer?.querySelector('img');
+const imageViewerClose = imageViewer?.querySelector('.image-viewer-close');
+const viewableImages = document.querySelectorAll(
+  '.website-portal .portal-fallback, .travel-visual img, .beer-feature img, .beer-visual img, .freelance-gallery img'
+);
+
+function closeImageViewer() {
+  if (!imageViewer || !imageViewerImage) {
+    return;
+  }
+
+  imageViewer.classList.remove('is-active');
+  imageViewer.setAttribute('aria-hidden', 'true');
+  imageViewerImage.removeAttribute('src');
+  imageViewerImage.alt = '';
+  document.body.classList.remove('viewer-open');
+}
+
+if (imageViewer && imageViewerImage) {
+  viewableImages.forEach((image) => {
+    const source = image.getAttribute('src') || '';
+
+    if (source.includes('Assets/HL/')) {
+      return;
+    }
+
+    image.classList.add('image-can-view');
+    image.setAttribute('tabindex', '0');
+
+    function openImageViewer() {
+      imageViewerImage.src = source;
+      imageViewerImage.alt = image.alt || 'Portfolio image preview';
+      imageViewer.classList.add('is-active');
+      imageViewer.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('viewer-open');
+      imageViewerClose?.focus();
+    }
+
+    image.addEventListener('click', openImageViewer);
+    image.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openImageViewer();
+      }
+    });
+  });
+
+  imageViewer.addEventListener('click', (event) => {
+    if (event.target === imageViewer) {
+      closeImageViewer();
+    }
+  });
+
+  imageViewerClose?.addEventListener('click', closeImageViewer);
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && imageViewer.classList.contains('is-active')) {
+      closeImageViewer();
+    }
+  });
+}
+
 const heroPuzzle = document.querySelector('.hero-puzzle');
 const puzzlePieces = document.querySelectorAll('.puzzle-piece');
 const puzzleSolve = document.querySelector('.puzzle-solve');
