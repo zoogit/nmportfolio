@@ -266,7 +266,7 @@ h1 {
 .statement-puzzle-wrap {
   display: flex;
   justify-content: flex-start;
-  margin: 0;
+  margin: clamp(24px, 3vw, 52px) 0 0;
 }
 
 .statement-puzzle-wrap .hero-puzzle {
@@ -1778,6 +1778,7 @@ h2 {
 
   .statement-puzzle-wrap {
     display: none;
+    margin: 0;
   }
 
   .statement-band {
