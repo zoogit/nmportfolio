@@ -734,12 +734,12 @@ h1 {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -21px;
+  bottom: -12px;
   width: 0;
   height: 0;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-  border-top: 9px solid var(--highlight);
+  border-top: 9px solid #000000;
   border-bottom: 0;
   opacity: 0;
   transform: translateX(-50%) translateY(-4px);
