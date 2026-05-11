@@ -375,7 +375,7 @@ h1 {
 .statement-band {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 66fr) minmax(320px, 34fr);
+  grid-template-columns: minmax(320px, 34fr) minmax(0, 66fr);
   align-items: center;
   column-gap: clamp(20px, 3vw, 48px);
   padding: clamp(54px, 8vw, 86px) var(--page-margin) clamp(56px, 7vw, 92px);
@@ -384,6 +384,7 @@ h1 {
 }
 
 .statement-band p {
+  grid-column: 2;
   max-width: 1110px;
   margin: 0;
   font-size: clamp(2.1rem, 5vw, 4.1rem);
@@ -688,7 +689,7 @@ h1 {
 
 @media (min-width: 1500px) {
   .statement-band {
-    grid-template-columns: minmax(0, 66fr) minmax(360px, 34fr);
+    grid-template-columns: minmax(360px, 34fr) minmax(0, 66fr);
     justify-content: start;
   }
 }
