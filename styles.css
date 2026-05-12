@@ -2022,8 +2022,8 @@ h2 {
 
   .skill-breakdown-label {
     margin-top: 82px;
-    font-size: clamp(2.6rem, 12vw, 4.35rem);
-    font-weight: 300;
+    font-size: clamp(1.78rem, 0.95vw, 0.92rem);
+    font-weight: 600;
     line-height: 1.18;
   }
 
