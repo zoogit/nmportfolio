@@ -384,7 +384,7 @@ h1 {
   background: var(--red);
 }
 
-.statement-band p {
+.statement-band > p:not(.skill-breakdown-label) {
   max-width: 1110px;
   margin: 0;
   font-size: clamp(2.1rem, 5vw, 4.1rem);
@@ -1845,7 +1845,7 @@ h2 {
     display: block;
   }
 
-  .statement-band p {
+  .statement-band > p:not(.skill-breakdown-label) {
     max-width: 1280px;
   }
 
