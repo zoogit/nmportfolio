@@ -1851,6 +1851,9 @@ h2 {
 
   .skill-breakdown-label {
     margin-top: 64px;
+    font-size: 1.78rem;
+    font-weight: 600;
+    line-height: 1.18;
   }
 
   .statement-dots {
@@ -2022,7 +2025,7 @@ h2 {
 
   .skill-breakdown-label {
     margin-top: 82px;
-    font-size: clamp(1.78rem, 0.95vw, 0.92rem);
+    font-size: 1.78rem;
     font-weight: 600;
     line-height: 1.18;
   }
