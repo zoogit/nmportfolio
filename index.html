@@ -541,8 +541,17 @@
           <h2 id="contact-title">Let’s build something together</h2>
         </div>
         <div class="contact-links">
-          <a href="mailto:your.email@example.com">Email</a>
-          <a href="#" aria-disabled="true">Resume</a>
+          <div class="contact-email">
+            <button class="contact-email-trigger" type="button" aria-label="Show email options">Email</button>
+            <div class="contact-email-popover" aria-label="Email options">
+              <span class="contact-email-address">nmaghame@gmail.com</span>
+              <div class="contact-email-actions">
+                <button class="contact-email-action" type="button" data-copy-email="nmaghame@gmail.com">Copy</button>
+                <a class="contact-email-action" href="mailto:nmaghame@gmail.com">Send</a>
+              </div>
+            </div>
+          </div>
+          <a href="Assets/resume/NM RESUME 2026.pdf" target="_blank" rel="noreferrer">Resume</a>
           <a href="#" aria-disabled="true">LinkedIn</a>
         </div>
       </div>

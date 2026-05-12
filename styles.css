@@ -1759,20 +1759,76 @@ h2 {
   gap: 12px;
 }
 
-.contact-links a {
+.contact-links a,
+.contact-email-trigger,
+.contact-email-action {
   min-height: 48px;
   display: inline-flex;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.55);
   padding: 0 18px;
   color: #ffffff;
+  background: transparent;
+  font: inherit;
   font-weight: 800;
   text-decoration: none;
+  cursor: pointer;
 }
 
-.contact-links a:hover {
+.contact-links a:hover,
+.contact-links a:focus-visible,
+.contact-email-trigger:hover,
+.contact-email-trigger:focus-visible,
+.contact-email:focus-within .contact-email-trigger,
+.contact-email:hover .contact-email-trigger,
+.contact-email-action:hover,
+.contact-email-action:focus-visible {
   color: #000000;
   background: #ffffff;
+}
+
+.contact-email {
+  position: relative;
+}
+
+.contact-email-popover {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  width: min(320px, calc(100vw - 36px));
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+  color: #ffffff;
+  background: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.contact-email:hover .contact-email-popover,
+.contact-email:focus-within .contact-email-popover {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.contact-email-address {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contact-email-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-email-action {
+  min-height: 40px;
+  padding: 0 14px;
 }
 
 .site-footer {

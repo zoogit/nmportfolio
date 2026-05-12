@@ -36,6 +36,35 @@ updateHeaderStyle();
 window.addEventListener('scroll', updateHeaderStyle, { passive: true });
 window.addEventListener('resize', updateHeaderStyle);
 
+document.querySelectorAll('[data-copy-email]').forEach((button) => {
+  const email = button.getAttribute('data-copy-email') || '';
+  const defaultLabel = button.textContent;
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(email);
+      button.textContent = 'Copied';
+    } catch {
+      const fallback = document.createElement('textarea');
+      fallback.value = email;
+      fallback.setAttribute('readonly', '');
+      fallback.style.position = 'fixed';
+      fallback.style.opacity = '0';
+      document.body.appendChild(fallback);
+      fallback.select();
+      document.execCommand('copy');
+      fallback.remove();
+      button.textContent = 'Copied';
+    }
+
+    window.setTimeout(() => {
+      button.textContent = defaultLabel;
+    }, 1400);
+  }
+
+  button.addEventListener('click', copyEmail);
+});
+
 const caseTabs = document.querySelectorAll('[data-case-tab]');
 const casePanels = document.querySelectorAll('[data-case-panel]');
 const savedCase = localStorage.getItem('selectedCaseStudy');
