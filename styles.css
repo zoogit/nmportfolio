@@ -2093,7 +2093,18 @@ h2 {
   }
 
   .freelance-gallery {
-    gap: 18px;
+    gap: 26px;
+  }
+
+  .png-mapper-preview {
+    height: 460px;
+  }
+
+  .png-mapper-preview iframe {
+    width: 125%;
+    height: 125%;
+    transform: scale(0.8);
+    transform-origin: 0 0;
   }
 
   .travel-visual > *,
