@@ -394,10 +394,11 @@ h1 {
 
 .skill-breakdown-label {
   grid-column: 1 / -1;
-  margin: clamp(40px, 6vw, 70px) 0 0;
+  margin: clamp(64px, 6vw, 82px) 0 0;
   color: #000000;
-  font-size: clamp(0.78rem, 0.95vw, 0.92rem);
+  font-size: 1.78rem;
   font-weight: 600;
+  line-height: 1.18;
 }
 
 .statement-dots {
