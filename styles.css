@@ -2020,6 +2020,10 @@ h2 {
     border-width: 2px;
   }
 
+  .skill-breakdown-label {
+    margin-top: 82px;
+  }
+
   .case-study-tabs {
     padding-left: var(--page-margin);
     padding-right: var(--page-margin);
