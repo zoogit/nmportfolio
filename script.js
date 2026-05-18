@@ -520,3 +520,23 @@ if (heroPuzzle && puzzlePieces.length) {
     });
   });
 }
+
+if (heroPuzzle && !puzzlePieces.length) {
+  function togglePortraitReveal() {
+    const isRevealed = heroPuzzle.classList.toggle('is-assembled');
+    puzzleSolve?.setAttribute('aria-pressed', String(isRevealed));
+  }
+
+  heroPuzzle.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      togglePortraitReveal();
+    }
+  });
+
+  puzzleSolve?.setAttribute('aria-pressed', 'false');
+  puzzleSolve?.addEventListener('click', (event) => {
+    event.stopPropagation();
+    togglePortraitReveal();
+  });
+}
