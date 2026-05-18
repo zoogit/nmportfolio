@@ -450,7 +450,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   font-size: clamp(1rem, 1.8vw, 1.35rem);
-  font-weight: 900;
+  font-weight: 300;
   opacity: 0;
   transform: translateX(-8px);
   transition: max-width 720ms cubic-bezier(0.16, 1, 0.3, 1), opacity 520ms ease, transform 720ms cubic-bezier(0.16, 1, 0.3, 1), margin 720ms cubic-bezier(0.16, 1, 0.3, 1);
