@@ -524,17 +524,17 @@ if (heroPuzzle && puzzlePieces.length) {
 if (heroPuzzle && !puzzlePieces.length) {
   function togglePortraitReveal() {
     const isRevealed = heroPuzzle.classList.toggle('is-assembled');
-    puzzleSolve?.setAttribute('aria-pressed', String(isRevealed));
+    if (puzzleSolve) {
+      puzzleSolve.setAttribute('aria-pressed', String(isRevealed));
+      puzzleSolve.textContent = isRevealed ? 'X' : 'Face Reveal';
+      puzzleSolve.setAttribute('aria-label', isRevealed ? 'Hide portrait' : 'Reveal portrait');
+    }
   }
 
-  heroPuzzle.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      togglePortraitReveal();
-    }
-  });
-
-  puzzleSolve?.setAttribute('aria-pressed', 'false');
+  if (puzzleSolve) {
+    puzzleSolve.setAttribute('aria-pressed', 'false');
+    puzzleSolve.setAttribute('aria-label', 'Reveal portrait');
+  }
   puzzleSolve?.addEventListener('click', (event) => {
     event.stopPropagation();
     togglePortraitReveal();

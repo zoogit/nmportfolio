@@ -323,10 +323,11 @@ h1 {
 }
 
 .hero-puzzle.is-assembled .puzzle-solve {
-  left: calc(100% - clamp(80px, 7vw, 104px));
-  top: calc(100% - clamp(80px, 7vw, 104px));
-  width: clamp(116px, 9vw, 148px);
-  font-size: clamp(0.84rem, 1vw, 1rem);
+  left: calc(100% - clamp(34px, 4.4vw, 58px));
+  top: clamp(34px, 4.4vw, 58px);
+  width: clamp(54px, 5.3vw, 76px);
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  transform: translate(-50%, -50%) rotate(18deg);
 }
 
 .puzzle-portrait {
