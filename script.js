@@ -275,7 +275,7 @@ const imageViewer = document.querySelector('#image-viewer');
 const imageViewerImage = imageViewer?.querySelector('img');
 const imageViewerClose = imageViewer?.querySelector('.image-viewer-close');
 const viewableImages = document.querySelectorAll(
-  '.travel-visual img, .beer-feature img, .beer-visual img, .freelance-gallery img'
+  '.travel-visual img, .beer-feature img, .beer-visual img, .freelance-gallery img, .mt-visual img'
 );
 
 function closeImageViewer() {
