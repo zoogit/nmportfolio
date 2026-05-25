@@ -173,6 +173,25 @@ skillTabs.forEach((tab) => {
   });
 });
 
+const statementDots = document.querySelector('.statement-dots');
+const statementLinks = document.querySelectorAll('.statement-link');
+if (statementDots && statementLinks.length && window.matchMedia('(max-width: 900px)').matches) {
+  const hintObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        statementLinks.forEach((link, i) => {
+          setTimeout(() => link.classList.add('hint-open'), 400 + i * 160);
+        });
+        setTimeout(() => {
+          statementLinks.forEach((link) => link.classList.remove('hint-open'));
+        }, 2800);
+        hintObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.6 });
+  hintObserver.observe(statementDots);
+}
+
 const pixelGrid = document.querySelector('[data-pixel-grid]');
 const pixelSwatches = document.querySelectorAll('[data-pixel-color]');
 let activePixelColor = '#010626';

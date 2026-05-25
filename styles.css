@@ -489,14 +489,16 @@ h1 {
 
 .statement-link:hover .statement-shape,
 .statement-link:focus-visible .statement-shape,
-.statement-link.is-active .statement-shape {
+.statement-link.is-active .statement-shape,
+.statement-link.hint-open .statement-shape {
   border-radius: 0;
   transform: rotate(18deg);
 }
 
 .statement-link:hover .statement-label,
 .statement-link:focus-visible .statement-label,
-.statement-link.is-active .statement-label {
+.statement-link.is-active .statement-label,
+.statement-link.hint-open .statement-label {
   max-width: 140px;
   margin-left: 32px;
   opacity: 1;

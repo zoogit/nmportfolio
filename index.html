@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11" />
+  <link rel="stylesheet" href="styles.css?v=12" />
 </head>
 <body>
   <header class="site-header">
@@ -59,13 +59,13 @@
       </div>
       <p class="skill-breakdown-label">Skill breakdown</p>
       <div class="statement-dots" role="tablist" aria-label="Skillset breakdown">
-        <button class="statement-link skill-ai" id="skill-tab-ai" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-ai" data-skill-tab="ai">
-          <span class="statement-shape"></span>
-          <span class="statement-label">AI</span>
-        </button>
         <button class="statement-link skill-software" id="skill-tab-software" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-software" data-skill-tab="software">
           <span class="statement-shape"></span>
           <span class="statement-label">Software</span>
+        </button>
+        <button class="statement-link skill-ai" id="skill-tab-ai" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-ai" data-skill-tab="ai">
+          <span class="statement-shape"></span>
+          <span class="statement-label">AI</span>
         </button>
         <button class="statement-link skill-leadership" id="skill-tab-leadership" type="button" role="tab" aria-selected="false" aria-controls="skill-panel-leadership" data-skill-tab="leadership">
           <span class="statement-shape"></span>
@@ -74,22 +74,6 @@
       </div>
 
       <div class="skill-panels">
-        <article class="skill-panel skill-panel-ai" id="skill-panel-ai" role="tabpanel" aria-labelledby="skill-tab-ai" data-skill-panel="ai" aria-hidden="true">
-          <div class="skill-panel-copy">
-            <h2>AI</h2>
-            <ul>
-              <li>Prompt Engineering</li>
-              <li>AI-Assisted Design Workflows</li>
-              <li>LLM Workflows</li>
-              <li>Workflow Automation</li>
-              <li>Research and Analysis</li>
-            </ul>
-          </div>
-          <div class="skill-panel-portal" aria-label="NimaGPT assistant preview">
-            <iframe src="https://nimagpt.netlify.app/" title="NimaGPT AI assistant"></iframe>
-          </div>
-        </article>
-
         <article class="skill-panel skill-panel-software" id="skill-panel-software" role="tabpanel" aria-labelledby="skill-tab-software" data-skill-panel="software" aria-hidden="true">
           <div class="skill-panel-copy">
             <h2>Software</h2>
@@ -133,6 +117,22 @@
               <button class="pixel-swatch" type="button" style="--swatch: #ffffff" data-pixel-color="#ffffff" aria-label="Use white"></button>
             </div>
             <div class="pixel-grid" data-pixel-grid role="grid" aria-label="Pixel canvas"></div>
+          </div>
+        </article>
+
+        <article class="skill-panel skill-panel-ai" id="skill-panel-ai" role="tabpanel" aria-labelledby="skill-tab-ai" data-skill-panel="ai" aria-hidden="true">
+          <div class="skill-panel-copy">
+            <h2>AI</h2>
+            <ul>
+              <li>Prompt Engineering</li>
+              <li>AI-Assisted Design Workflows</li>
+              <li>LLM Workflows</li>
+              <li>Workflow Automation</li>
+              <li>Research and Analysis</li>
+            </ul>
+          </div>
+          <div class="skill-panel-portal" aria-label="NimaGPT assistant preview">
+            <iframe src="https://nimagpt.netlify.app/" title="NimaGPT AI assistant"></iframe>
           </div>
         </article>
 
@@ -481,7 +481,7 @@
         </div>
 
         <div class="case-visual mt-visual" aria-label="Master Template brand and site image grid">
-          <img src="Assets/MT/207365405_f3f7f966-442f-4a0e-93d5-7bb1dc239dc4.png" alt="Master Template marketing site on laptop and mobile" />
+          <img src="Assets/MT/20.png" alt="Master Template marketing site on laptop and mobile" />
           <img src="Assets/MT/logo-display-1.png" alt="Master Template logo system" />
           <img src="Assets/MT/figma%20scheme.PNG" alt="Master Template Figma design system" />
           <img src="Assets/MT/787.PNG" alt="Master Template product features page" />
@@ -615,6 +615,6 @@
     <p>Design leadership, brand systems, and creative operations.</p>
   </footer>
 
-  <script src="script.js?v=8"></script>
+  <script src="script.js?v=9"></script>
 </body>
 </html>
