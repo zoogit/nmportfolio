@@ -882,7 +882,7 @@ h1 {
 .logo-tab:hover .client-name,
 .logo-tab:focus-visible .client-name,
 .logo-tab.is-active .client-name {
-  max-width: 210px;
+  max-width: 320px;
   margin-left: 18px;
   opacity: 1;
   transform: translateX(0);
