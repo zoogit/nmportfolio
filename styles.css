@@ -2122,6 +2122,49 @@ h2 {
   .mt-visual > * {
     min-height: 260px;
   }
+
+  #panel-mt .website-portal {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 12px solid #1c1c1e;
+    border-radius: 52px;
+    overflow: hidden;
+    background: #1c1c1e;
+    box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.1), 0 32px 88px rgba(0, 0, 0, 0.34);
+  }
+
+  #panel-mt .portal-topbar {
+    background: #1c1c1e;
+    border-bottom: 0;
+    justify-content: center;
+    gap: 0;
+    padding: 0 24px;
+  }
+
+  #panel-mt .portal-topbar span {
+    display: none;
+  }
+
+  #panel-mt .portal-topbar a {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 0.8rem;
+    margin: 0;
+  }
+
+  #panel-mt .portal-screen {
+    height: 640px;
+  }
+
+  #panel-mt .website-portal::after {
+    content: "";
+    display: block;
+    width: 110px;
+    height: 4px;
+    margin: 10px auto;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 2px;
+  }
 }
 
 @media (max-width: 560px) {
