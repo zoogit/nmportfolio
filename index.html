@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=9" />
+  <link rel="stylesheet" href="styles.css?v=10" />
 </head>
 <body>
   <header class="site-header">
@@ -168,6 +168,10 @@
         <button class="logo-tab" id="tab-handbrewed" type="button" role="tab" aria-selected="false" aria-controls="panel-handbrewed" data-case-tab="handbrewed">
           <span class="client-logo client-logo-hbb"><img src="Assets/HBB/12.png" alt="" /></span>
           <span class="client-name">Hand Brewed Beer</span>
+        </button>
+        <button class="logo-tab" id="tab-mt" type="button" role="tab" aria-selected="false" aria-controls="panel-mt" data-case-tab="mt">
+          <span class="client-logo client-logo-mt"><img src="Assets/MT/logo-display-1.png" alt="" /></span>
+          <span class="client-name">Master Template</span>
         </button>
         <button class="logo-tab" id="tab-more" type="button" role="tab" aria-selected="false" aria-controls="panel-more" data-case-tab="more">
           <span class="client-logo client-logo-more" aria-hidden="true"><span>NM</span></span>
@@ -416,6 +420,61 @@
             <h3>Results</h3>
             <p>The brand has been in active use since launch with an ongoing client relationship. Deliverables span the full commercial surface area of the business: can labels, apparel and merchandise, billboard campaigns, event posters, and social and digital graphics; a full brand ecosystem built and maintained by one designer.</p>
           </article>
+        </div>
+      </div>
+
+      <div class="case-panel" id="panel-mt" role="tabpanel" aria-labelledby="tab-mt" data-case-panel="mt" hidden>
+        <div class="case-hero">
+          <div class="case-brand" aria-label="Master Template">
+            <img class="case-brand-logo mt-brand-logo" src="Assets/MT/logo-display-1.png" alt="Master Template logo" />
+            <span>Founder, Brand Designer, UI Designer, Developer</span>
+          </div>
+          <h2>Building a Presentation Automation Product from Concept to Launch</h2>
+          <p>I founded Master Template and owned the full product arc — brand identity, UI design, Next.js marketing site, and campaign materials — using AI-assisted workflows to compress a multi-person production timeline into a solo operation.</p>
+        </div>
+
+        <div class="beer-feature" aria-label="Master Template product on desktop and mobile">
+          <img src="Assets/MT/207365405_f3f7f966-442f-4a0e-93d5-7bb1dc239dc4.png" alt="Master Template marketing site on laptop and mobile" />
+        </div>
+
+        <div class="case-detail-tabs">
+          <div class="case-detail-menu" role="tablist" aria-label="Master Template case study sections">
+            <button class="case-detail-tab is-active" id="mt-subtab-situation" type="button" role="tab" aria-selected="true" aria-controls="mt-subpanel-situation" data-detail-tab="mt:situation">The Situation</button>
+            <button class="case-detail-tab" id="mt-subtab-role" type="button" role="tab" aria-selected="false" aria-controls="mt-subpanel-role" data-detail-tab="mt:role">My Role</button>
+            <button class="case-detail-tab" id="mt-subtab-challenge" type="button" role="tab" aria-selected="false" aria-controls="mt-subpanel-challenge" data-detail-tab="mt:challenge">The Challenge</button>
+            <button class="case-detail-tab" id="mt-subtab-approach" type="button" role="tab" aria-selected="false" aria-controls="mt-subpanel-approach" data-detail-tab="mt:approach">My Approach</button>
+            <button class="case-detail-tab" id="mt-subtab-results" type="button" role="tab" aria-selected="false" aria-controls="mt-subpanel-results" data-detail-tab="mt:results">Results</button>
+          </div>
+
+          <article class="case-detail-panel is-active" id="mt-subpanel-situation" role="tabpanel" aria-labelledby="mt-subtab-situation" data-detail-panel="mt:situation">
+            <h3>The Situation</h3>
+            <p>Presentation templates are one of the most universally painful problems in professional design. Inconsistent formatting, manual updates, brand drift, and hours lost to repetitive production work compound across every team that relies on them. Master Template was built to solve that through automation, giving teams a faster, cleaner, and more consistent way to produce on-brand PowerPoint presentations at scale.</p>
+          </article>
+          <article class="case-detail-panel" id="mt-subpanel-role" role="tabpanel" aria-labelledby="mt-subtab-role" data-detail-panel="mt:role" hidden>
+            <h3>My Role</h3>
+            <p>As founder, I owned the complete arc from initial conception to launch. That meant defining the product vision, building the brand identity, designing the UI in Figma, developing the marketing site in Next.js, and producing campaign materials in Adobe Creative Suite, all accelerated through AI-assisted workflows that compressed a multi-person production timeline into a solo operation without sacrificing quality or consistency.</p>
+          </article>
+          <article class="case-detail-panel" id="mt-subpanel-challenge" role="tabpanel" aria-labelledby="mt-subtab-challenge" data-detail-panel="mt:challenge" hidden>
+            <h3>The Challenge</h3>
+            <p>Design software is a crowded, skeptical market. A new tool needs to communicate its value instantly and look like it belongs alongside established products. The brand needed to feel authoritative and polished without being cold, clean and bold enough to signal professionalism, but human enough to earn trust with a mixed audience of designers, marketers, and entrepreneurs.</p>
+          </article>
+          <article class="case-detail-panel" id="mt-subpanel-approach" role="tabpanel" aria-labelledby="mt-subtab-approach" data-detail-panel="mt:approach" hidden>
+            <h3>My Approach</h3>
+            <p>I developed a clean, business-forward visual identity that prioritizes clarity and confidence. The aesthetic direction strips away decoration and lets the product logic speak. Sharp typography, structured layouts, and a restrained color system work across product UI, marketing, and campaign contexts without losing consistency. Every decision was made with the full production pipeline in mind, from how the brand would render in Figma components to how it would translate into Next.js on the live site.</p>
+          </article>
+          <article class="case-detail-panel" id="mt-subpanel-results" role="tabpanel" aria-labelledby="mt-subtab-results" data-detail-panel="mt:results" hidden>
+            <h3>Results</h3>
+            <p>Master Template launched as a live active product with a fully realized brand system spanning product identity, UI direction, marketing site, and campaign materials. The entire production pipeline from conception through brand strategy, design execution, development, and launch was completed by one person, combining deep domain expertise, technical proficiency across Figma, Adobe Creative Suite, and Next.js, and AI-assisted workflows that made solo founder-level output genuinely competitive.</p>
+          </article>
+        </div>
+
+        <div class="case-visual mt-visual" aria-label="Master Template brand and site image grid">
+          <img src="Assets/MT/1.PNG" alt="Master Template desktop homepage" />
+          <img src="Assets/MT/Capture123.PNG" alt="Master Template site design" />
+          <img src="Assets/MT/787.PNG" alt="Master Template product features page" />
+          <img src="Assets/MT/logo-display-1.png" alt="Master Template logo system" />
+          <img src="Assets/MT/figma%20scheme.PNG" alt="Master Template Figma design system" />
+          <img src="Assets/MT/mocap.PNG" alt="Master Template mobile mockup" />
         </div>
       </div>
 
