@@ -1197,6 +1197,10 @@ h1 {
   object-position: right top;
 }
 
+.beer-video {
+  object-fit: cover;
+}
+
 .bonus-project {
   display: grid;
   grid-template-columns: minmax(220px, 0.45fr) minmax(0, 0.55fr);
