@@ -292,6 +292,7 @@ document.querySelectorAll('.website-portal').forEach((portal) => {
 
 const imageViewer = document.querySelector('#image-viewer');
 const imageViewerImage = imageViewer?.querySelector('img');
+const imageViewerVideo = imageViewer?.querySelector('video');
 const imageViewerClose = imageViewer?.querySelector('.image-viewer-close');
 const viewableImages = document.querySelectorAll(
   '.travel-visual img, .beer-feature img, .beer-visual img, .freelance-gallery img, .mt-visual img'
@@ -302,10 +303,14 @@ function closeImageViewer() {
     return;
   }
 
-  imageViewer.classList.remove('is-active');
+  imageViewer.classList.remove('is-active', 'is-video');
   imageViewer.setAttribute('aria-hidden', 'true');
   imageViewerImage.removeAttribute('src');
   imageViewerImage.alt = '';
+  if (imageViewerVideo) {
+    imageViewerVideo.removeAttribute('src');
+    imageViewerVideo.load();
+  }
   document.body.classList.remove('viewer-open');
 }
 
@@ -351,6 +356,28 @@ if (imageViewer && imageViewerImage) {
       closeImageViewer();
     }
   });
+
+  const beerVideo = document.querySelector('.beer-video');
+  if (beerVideo && imageViewerVideo) {
+    beerVideo.classList.add('image-can-view');
+    beerVideo.setAttribute('tabindex', '0');
+
+    function openVideoViewer() {
+      imageViewerVideo.src = beerVideo.src;
+      imageViewer.classList.add('is-active', 'is-video');
+      imageViewer.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('viewer-open');
+      imageViewerClose?.focus();
+    }
+
+    beerVideo.addEventListener('click', openVideoViewer);
+    beerVideo.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openVideoViewer();
+      }
+    });
+  }
 }
 
 const heroPuzzle = document.querySelector('.hero-puzzle');
