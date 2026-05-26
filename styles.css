@@ -2094,6 +2094,14 @@ h2 {
   max-width: 70px;
 }
 
+.mt-intro-video {
+  display: block;
+  width: 100%;
+  margin: 0 0 clamp(56px, 8vw, 96px);
+  border-radius: 8px;
+  object-fit: cover;
+}
+
 .mt-visual {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
