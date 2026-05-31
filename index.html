@@ -7,8 +7,8 @@
   <meta name="description" content="Portfolio for Nima Maghame, a design manager and creative leader focused on brand experiences, team mentorship, and creative operations." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=24" />
 </head>
 <body>
   <header class="site-header">
@@ -153,30 +153,92 @@
       </div>
     </section>
 
-    <section id="work" class="case-study-tabs" aria-labelledby="work-title">
-      <p class="client-menu-title">Work by Client</p>
-      <div class="logo-tabs" role="tablist" aria-label="Case study companies">
-        <button class="logo-tab is-active" id="tab-hl" type="button" role="tab" aria-selected="true" aria-controls="panel-hl" data-case-tab="hl">
-          <span class="client-logo client-logo-hl"><img src="Assets/HL/HL1%20copy.png" alt="" /></span>
-          <span class="client-name">HL</span>
-        </button>
-        <button class="logo-tab" id="tab-mt" type="button" role="tab" aria-selected="false" aria-controls="panel-mt" data-case-tab="mt">
-          <span class="client-logo client-logo-mt"><img src="Assets/MT/Logos/mark1.svg" alt="" /></span>
-          <span class="client-name">Master Template</span>
-        </button>
-        <button class="logo-tab" id="tab-handbrewed" type="button" role="tab" aria-selected="false" aria-controls="panel-handbrewed" data-case-tab="handbrewed">
-          <span class="client-logo client-logo-hbb"><img src="Assets/HBB/12.png" alt="" /></span>
-          <span class="client-name">Hand Brewed Beer</span>
-        </button>
-        <button class="logo-tab" id="tab-wanderluxe" type="button" role="tab" aria-selected="false" aria-controls="panel-wanderluxe" data-case-tab="wanderluxe">
-          <span class="client-logo client-logo-wl"><img src="Assets/WL/12.png" alt="" /></span>
-          <span class="client-name">WanderLuxe Tours</span>
-        </button>
-        <button class="logo-tab" id="tab-more" type="button" role="tab" aria-selected="false" aria-controls="panel-more" data-case-tab="more">
-          <span class="client-logo client-logo-more" aria-hidden="true"><span>NM</span></span>
-          <span class="client-name">Selected Projects</span>
-        </button>
+    <section id="work" class="case-study-menu" aria-labelledby="work-title">
+      <div class="case-study-menu-heading">
+        <h2 id="work-title">Case Studies</h2>
       </div>
+
+      <div class="case-study-grid" role="tablist" aria-label="Case study menu">
+        <a class="case-study-card is-active" id="tab-hl" href="#panel-hl" role="tab" aria-selected="true" aria-controls="panel-hl" data-case-tab="hl" aria-label="Open HL case study">
+          <div class="case-study-card-media case-study-card-media-hl">
+            <div class="hl-preview-grid" aria-label="Rotating HL presentation design samples">
+              <img src="Assets/HL/0635623e-4dff-4182-bf93-328ae1078096_rw_1920.png" alt="HL presentation design sample" data-hl-preview />
+              <img src="Assets/HL/22183e21-0074-47e7-8333-02f168d9e880_rw_1920.png" alt="HL presentation design sample" data-hl-preview />
+              <img src="Assets/HL/30e0a043-0764-418a-a6fc-ac5bf839f049_rw_1920.png" alt="HL presentation design sample" data-hl-preview />
+              <img src="Assets/HL/544e4f3b-739d-49fa-9a0f-1f67184c30a7_rw_1920.png" alt="HL presentation design sample" data-hl-preview />
+            </div>
+            <span class="case-study-card-corner" aria-hidden="true"><img src="Assets/HL/HL1%20copy.png" alt="" /></span>
+          </div>
+          <div class="case-study-card-caption">
+            <h3>HL <span>Design Manager</span></h3>
+            <p>Design management, team leadership, and high-volume presentation systems for a global financial environment.</p>
+          </div>
+        </a>
+
+        <a class="case-study-card" id="tab-mt" href="#panel-mt" role="tab" aria-selected="false" aria-controls="panel-mt" data-case-tab="mt" aria-label="Open Master Template case study">
+          <div class="case-study-card-media">
+            <video src="Assets/MT/Comp 1_2.mp4" autoplay muted loop playsinline aria-label="Master Template product motion preview"></video>
+            <span class="case-study-card-corner" aria-hidden="true"><img src="Assets/MT/Logos/mark1.svg" alt="" /></span>
+          </div>
+          <div class="case-study-card-caption">
+            <h3>Master Template <span>Founder, Brand Designer, UI Designer, Developer</span></h3>
+            <p>Brand identity, product design, campaign assets, and a live website for a presentation automation product.</p>
+          </div>
+        </a>
+
+        <a class="case-study-card" id="tab-handbrewed" href="#panel-handbrewed" role="tab" aria-selected="false" aria-controls="panel-handbrewed" data-case-tab="handbrewed" aria-label="Open Hand Brewed Beer case study">
+          <div class="case-study-card-media">
+            <video src="Assets/HBB/hbb-video.mp4" autoplay muted loop playsinline aria-label="Hand Brewed Beer campaign video preview"></video>
+            <span class="case-study-card-corner" aria-hidden="true"><img src="Assets/HBB/12.png" alt="" /></span>
+          </div>
+          <div class="case-study-card-caption">
+            <h3>Hand Brewed Beer <span>Graphic Designer and Brand Partner</span></h3>
+            <p>Packaging, campaign visuals, merchandise, and brand support for an active craft brewery relationship.</p>
+          </div>
+        </a>
+
+        <a class="case-study-card" id="tab-wanderluxe" href="#panel-wanderluxe" role="tab" aria-selected="false" aria-controls="panel-wanderluxe" data-case-tab="wanderluxe" aria-label="Open WanderLuxe Tours case study">
+          <div class="case-study-card-media">
+            <img src="Assets/WL/collage/12111.jpg" alt="WanderLuxe Tours website and brand preview" />
+            <span class="case-study-card-corner" aria-hidden="true"><img src="Assets/WL/12.png" alt="" /></span>
+          </div>
+          <div class="case-study-card-caption">
+            <h3>WanderLuxe Tours <span>Brand Designer and Web Developer</span></h3>
+            <p>Luxury travel identity, visual system, and responsive web experience developed from the ground up.</p>
+          </div>
+        </a>
+
+        <a class="case-study-card case-study-card-no-preview" id="tab-more" href="#panel-more" role="tab" aria-selected="false" aria-controls="panel-more" data-case-tab="more" aria-label="Open selected projects case study">
+          <div class="case-study-card-caption">
+            <h3>Selected Projects</h3>
+            <p>A catch-all collection of brand, digital, campaign, and production work across freelance projects.</p>
+          </div>
+        </a>
+      </div>
+
+      <nav class="case-study-side-menu" aria-label="Switch case study">
+        <p>Case studies</p>
+        <button class="case-study-side-link is-active" type="button" data-case-jump="hl" aria-pressed="true">
+          <span>HL</span>
+          <small>Design Manager</small>
+        </button>
+        <button class="case-study-side-link" type="button" data-case-jump="mt" aria-pressed="false">
+          <span>Master Template</span>
+          <small>Founder & Designer</small>
+        </button>
+        <button class="case-study-side-link" type="button" data-case-jump="handbrewed" aria-pressed="false">
+          <span>Hand Brewed Beer</span>
+          <small>Brand Partner</small>
+        </button>
+        <button class="case-study-side-link" type="button" data-case-jump="wanderluxe" aria-pressed="false">
+          <span>WanderLuxe Tours</span>
+          <small>Brand & Web</small>
+        </button>
+        <button class="case-study-side-link" type="button" data-case-jump="more" aria-pressed="false">
+          <span>Selected Projects</span>
+          <small>Creative Direction</small>
+        </button>
+      </nav>
 
       <div class="case-panel is-active" id="panel-hl" role="tabpanel" aria-labelledby="tab-hl" data-case-panel="hl">
         <div class="case-hero">
@@ -184,7 +246,7 @@
             <img class="case-brand-logo" src="Assets/HL/HL1.png" alt="HL logo" />
             <span>Design Manager</span>
           </div>
-          <h2 id="work-title">Leading a Global Presentation Design Team in a High-Pressure Financial Environment</h2>
+          <h2>Leading a Global Presentation Design Team in a High-Pressure Financial Environment</h2>
           <p>I lead a team of designers, specialists, and project coordinators in a global investment banking environment, overseeing quality, mentoring creatives, and implementing workflow improvements to deliver high-volume, deadline-driven client presentations.</p>
         </div>
 
@@ -566,7 +628,6 @@
         </div>
       </div>
     </section>
-
     <section id="about" class="about-section" aria-labelledby="about-title">
       <div class="about-contact-grid">
         <div>
@@ -618,6 +679,6 @@
     <p>Design leadership, brand systems, and creative operations.</p>
   </footer>
 
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>

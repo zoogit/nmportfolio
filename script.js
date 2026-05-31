@@ -67,6 +67,10 @@ document.querySelectorAll('[data-copy-email]').forEach((button) => {
 
 const caseTabs = document.querySelectorAll('[data-case-tab]');
 const casePanels = document.querySelectorAll('[data-case-panel]');
+const caseJumpLinks = document.querySelectorAll('[data-case-jump]');
+const caseSideMenu = document.querySelector('.case-study-side-menu');
+const caseStudyGrid = document.querySelector('.case-study-grid');
+const aboutSection = document.querySelector('#about');
 const savedCase = localStorage.getItem('selectedCaseStudy');
 
 function selectCaseStudy(selectedCase) {
@@ -87,6 +91,12 @@ function selectCaseStudy(selectedCase) {
     panel.classList.toggle('is-active', isSelected);
     panel.hidden = !isSelected;
   });
+
+  caseJumpLinks.forEach((item) => {
+    const isSelected = item.dataset.caseJump === selectedCase;
+    item.classList.toggle('is-active', isSelected);
+    item.setAttribute('aria-pressed', String(isSelected));
+  });
 }
 
 caseTabs.forEach((tab) => {
@@ -100,6 +110,59 @@ caseTabs.forEach((tab) => {
 if (savedCase) {
   selectCaseStudy(savedCase);
 }
+
+caseJumpLinks.forEach((button) => {
+  button.addEventListener('click', () => {
+    const selectedCase = button.dataset.caseJump;
+    selectCaseStudy(selectedCase);
+    localStorage.setItem('selectedCaseStudy', selectedCase);
+    document.querySelector(`[data-case-panel="${selectedCase}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
+
+function updateCaseSideMenu() {
+  if (!caseSideMenu || !caseStudyGrid || !aboutSection) {
+    return;
+  }
+
+  document.documentElement.style.setProperty('--case-menu-offset', `${header.offsetHeight}px`);
+  const gridBottom = caseStudyGrid.getBoundingClientRect().bottom;
+  const aboutTop = aboutSection.getBoundingClientRect().top;
+  const isVisible = gridBottom < 120 && aboutTop > window.innerHeight * 0.45;
+  caseSideMenu.classList.toggle('is-visible', isVisible);
+}
+
+updateCaseSideMenu();
+window.addEventListener('scroll', updateCaseSideMenu, { passive: true });
+window.addEventListener('resize', updateCaseSideMenu);
+
+const hlPreviewImages = document.querySelectorAll('[data-hl-preview]');
+const hlPreviewSources = [
+  'Assets/HL/0635623e-4dff-4182-bf93-328ae1078096_rw_1920.png',
+  'Assets/HL/22183e21-0074-47e7-8333-02f168d9e880_rw_1920.png',
+  'Assets/HL/30e0a043-0764-418a-a6fc-ac5bf839f049_rw_1920.png',
+  'Assets/HL/544e4f3b-739d-49fa-9a0f-1f67184c30a7_rw_1920.png',
+  'Assets/HL/84774f52-5c8f-494d-8e22-b34a9fa94617_rw_1920.png',
+  'Assets/HL/ff97869f-e9d3-4df6-8c97-ea2b5dce046d_rw_1920.png',
+  'Assets/HL/0529e6c3-4f40-4b57-ad3c-4b1667405d61_rw_1920.png',
+  'Assets/HL/384a7be6-a63c-4ed8-8c25-732cbe395062_rw_1200.png',
+  'Assets/HL/3ac0560b-0a87-41b5-ac0e-f33c63966f81_rw_1920.png',
+  'Assets/HL/50793559-23cb-402e-a074-39612f46c706_rw_1200.png',
+];
+
+hlPreviewImages.forEach((image, index) => {
+  let sourceIndex = index;
+
+  window.setInterval(() => {
+    sourceIndex = (sourceIndex + 3) % hlPreviewSources.length;
+    image.classList.add('is-swapping');
+
+    window.setTimeout(() => {
+      image.src = hlPreviewSources[sourceIndex];
+      image.classList.remove('is-swapping');
+    }, 140);
+  }, 920 + index * 170);
+});
 
 const hlTabs = document.querySelectorAll('[data-hl-tab]');
 const hlPanels = document.querySelectorAll('[data-hl-panel]');
