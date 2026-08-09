@@ -445,7 +445,6 @@ if (imageViewer && imageViewerImage) {
 
 const heroPuzzle = document.querySelector('.hero-puzzle');
 const puzzlePieces = document.querySelectorAll('.puzzle-piece');
-const puzzleSolve = document.querySelector('.puzzle-solve');
 const puzzleLayout = [
   [0, 0, 24.3, 23.8],
   [24.3, 0, 31.5, 23.8],
@@ -548,19 +547,6 @@ if (heroPuzzle && puzzlePieces.length) {
     }
   });
 
-  if (puzzleSolve) {
-    puzzleSolve.addEventListener('click', (event) => {
-      event.stopPropagation();
-      heroPuzzle.classList.add('is-assembled');
-
-      puzzlePieces.forEach((piece) => {
-        piece.style.setProperty('--drag-x', '0px');
-        piece.style.setProperty('--drag-y', '0px');
-        piece.classList.add('is-flipped');
-      });
-    });
-  }
-
   puzzlePieces.forEach((piece) => {
     piece.addEventListener('pointerdown', (event) => {
       event.preventDefault();
@@ -630,22 +616,3 @@ if (heroPuzzle && puzzlePieces.length) {
   });
 }
 
-if (heroPuzzle && !puzzlePieces.length) {
-  function togglePortraitReveal() {
-    const isRevealed = heroPuzzle.classList.toggle('is-assembled');
-    if (puzzleSolve) {
-      puzzleSolve.setAttribute('aria-pressed', String(isRevealed));
-      puzzleSolve.textContent = isRevealed ? 'X' : 'Face Reveal';
-      puzzleSolve.setAttribute('aria-label', isRevealed ? 'Hide portrait' : 'Reveal portrait');
-    }
-  }
-
-  if (puzzleSolve) {
-    puzzleSolve.setAttribute('aria-pressed', 'false');
-    puzzleSolve.setAttribute('aria-label', 'Reveal portrait');
-  }
-  puzzleSolve?.addEventListener('click', (event) => {
-    event.stopPropagation();
-    togglePortraitReveal();
-  });
-}
