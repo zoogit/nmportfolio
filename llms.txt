@@ -1,0 +1,20 @@
+# Nima Maghame
+
+Design Manager and Creative Leader
+Los Angeles, California
+
+Nima Maghame is a design manager and creative leader with over 15 years of experience across presentation design, branding, web design, UI/UX, front-end development, and AI-assisted workflow design. His work combines creative leadership, technical curiosity, operational thinking, and hands-on execution.
+
+## Case Studies
+
+- HL: Design management, creative operations, workflow systems, and high-volume presentation design in a global financial environment. https://nimagpt.netlify.app/work/houlihan-lokey/
+- Master Template: Brand identity, product design, UI design, campaign assets, Next.js development, and AI-assisted workflow for a presentation automation product. https://nimagpt.netlify.app/work/master-template/
+- Hand Brewed Beer: Packaging, campaign visuals, merchandise, advertising, and brand support for a Southern California craft brewery. https://nimagpt.netlify.app/work/hand-brewed-beer/
+- Thunder in the Territories: Original game concept, art direction, pixel art, UI design, worldbuilding, and front-end development. https://nimagpt.netlify.app/work/thunder-in-the-territories/
+- WanderLuxe Tours: Luxury travel brand identity, website design, UI/UX, responsive web design, and inquiry-flow work. https://nimagpt.netlify.app/work/wanderluxe-tours/
+- Selected Projects: Freelance work across brand identity, digital design, campaigns, packaging, and production. https://nimagpt.netlify.app/work/selected-projects/
+
+## Canonical Pages
+
+- Home: https://nimagpt.netlify.app/
+- Case study index: https://nimagpt.netlify.app/work/

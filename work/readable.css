@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  color: #151515;
+  background: #f7f8fb;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+main {
+  width: min(100% - 40px, 920px);
+  margin: 0 auto;
+  padding: 42px 0 80px;
+}
+
+a {
+  color: #151515;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 0 0 18px;
+  font-size: clamp(2.6rem, 7vw, 5.8rem);
+  line-height: .95;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  line-height: 1.15;
+}
+
+p {
+  color: #344054;
+}
+
+header > p {
+  max-width: 760px;
+  font-size: 1.15rem;
+}
+
+section {
+  border-top: 1px solid #d8dde6;
+  margin-top: 26px;
+  padding-top: 22px;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 34px 0;
+}
+
+dt {
+  color: #667085;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+dd {
+  margin: 6px 0 0;
+  font-weight: 700;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #667085;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.note {
+  border-left: 4px solid #151515;
+  padding-left: 16px;
+}

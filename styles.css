@@ -752,6 +752,29 @@ h1 {
   line-height: 0.96;
 }
 
+.readable-case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  max-width: 880px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.readable-case-links a {
+  color: rgba(18, 31, 53, 0.66);
+  text-decoration: none;
+}
+
+.readable-case-links a:hover {
+  color: var(--deep-navy);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .case-study-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
