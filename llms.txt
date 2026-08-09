@@ -7,14 +7,14 @@ Nima Maghame is a design manager and creative leader with over 15 years of exper
 
 ## Case Studies
 
-- HL: Design management, creative operations, workflow systems, and high-volume presentation design in a global financial environment. https://nimagpt.netlify.app/work/hl/
-- Master Template: Brand identity, product design, UI design, campaign assets, Next.js development, and AI-assisted workflow for a presentation automation product. https://nimagpt.netlify.app/work/master-template/
-- Hand Brewed Beer: Packaging, campaign visuals, merchandise, advertising, and brand support for a Southern California craft brewery. https://nimagpt.netlify.app/work/hand-brewed-beer/
-- Thunder in the Territories: Original game concept, art direction, pixel art, UI design, worldbuilding, and front-end development. https://nimagpt.netlify.app/work/thunder-in-the-territories/
-- WanderLuxe Tours: Luxury travel brand identity, website design, UI/UX, responsive web design, and inquiry-flow work. https://nimagpt.netlify.app/work/wanderluxe-tours/
-- Selected Projects: Freelance work across brand identity, digital design, campaigns, packaging, and production. https://nimagpt.netlify.app/work/selected-projects/
+- HL: Design management, creative operations, workflow systems, and high-volume presentation design in a global financial environment. Nima now runs the LA office presentation design team after growing from leading the night team into a broader office-wide leadership role. Results include supporting 200-400 confidential requests per month and turning 1,000-plus point PNGMapper map jobs from hours of manual work into minutes. https://nimamaghame.com/work/hl/
+- Master Template: Brand identity, product design, UI design, campaign assets, Next.js development, and AI-assisted workflow for a presentation automation product. https://nimamaghame.com/work/master-template/
+- Hand Brewed Beer: Packaging, campaign visuals, merchandise, advertising, and brand support for a Southern California craft brewery. https://nimamaghame.com/work/hand-brewed-beer/
+- Thunder in the Territories: Original game concept, art direction, pixel art, UI design, worldbuilding, and front-end development. Nima's role is Creator, Art Director and Game Designer. https://nimamaghame.com/work/thunder-in-the-territories/
+- WanderLuxe Tours: Luxury travel brand identity, website design, UI/UX, responsive web design, and inquiry-flow work. https://nimamaghame.com/work/wanderluxe-tours/
+- Selected Projects: Freelance work across brand identity, digital design, campaigns, packaging, and production. https://nimamaghame.com/work/selected-projects/
 
 ## Canonical Pages
 
-- Home: https://nimagpt.netlify.app/
-- Case study index: https://nimagpt.netlify.app/work/
+- Home: https://nimamaghame.com/
+- Case study index: https://nimamaghame.com/work/
