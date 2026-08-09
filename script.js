@@ -71,7 +71,7 @@ const caseJumpLinks = document.querySelectorAll('[data-case-jump]');
 const caseSideMenu = document.querySelector('.case-study-side-menu');
 const caseStudyGrid = document.querySelector('.case-study-grid');
 const aboutSection = document.querySelector('#about');
-const savedCase = localStorage.getItem('selectedCaseStudy');
+const savedCase = localStorage.getItem('selectedCaseStudyV2');
 
 function selectCaseStudy(selectedCase) {
   const selectedTab = [...caseTabs].find((tab) => tab.dataset.caseTab === selectedCase);
@@ -103,7 +103,7 @@ caseTabs.forEach((tab) => {
   tab.addEventListener('click', () => {
     const selectedCase = tab.dataset.caseTab;
     selectCaseStudy(selectedCase);
-    localStorage.setItem('selectedCaseStudy', selectedCase);
+    localStorage.setItem('selectedCaseStudyV2', selectedCase);
   });
 });
 
@@ -115,7 +115,7 @@ caseJumpLinks.forEach((button) => {
   button.addEventListener('click', () => {
     const selectedCase = button.dataset.caseJump;
     selectCaseStudy(selectedCase);
-    localStorage.setItem('selectedCaseStudy', selectedCase);
+    localStorage.setItem('selectedCaseStudyV2', selectedCase);
     document.querySelector(`[data-case-panel="${selectedCase}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });

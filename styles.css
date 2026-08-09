@@ -975,6 +975,36 @@ h1 {
   line-height: 1.2;
 }
 
+.case-study-card[data-case-tab="handbrewed"],
+.case-study-side-link[data-case-jump="handbrewed"] {
+  order: 1;
+}
+
+.case-study-card[data-case-tab="thunder"],
+.case-study-side-link[data-case-jump="thunder"] {
+  order: 2;
+}
+
+.case-study-card[data-case-tab="mt"],
+.case-study-side-link[data-case-jump="mt"] {
+  order: 3;
+}
+
+.case-study-card[data-case-tab="hl"],
+.case-study-side-link[data-case-jump="hl"] {
+  order: 4;
+}
+
+.case-study-card[data-case-tab="wanderluxe"],
+.case-study-side-link[data-case-jump="wanderluxe"] {
+  order: 5;
+}
+
+.case-study-card[data-case-tab="more"],
+.case-study-side-link[data-case-jump="more"] {
+  order: 6;
+}
+
 .case-study-side-menu {
   position: fixed;
   z-index: 12;
@@ -1259,6 +1289,11 @@ h1 {
   max-width: 96px;
 }
 
+.titt-brand-logo {
+  height: clamp(52px, 5.5vw, 86px);
+  max-width: 220px;
+}
+
 .wanderluxe-mark {
   background: var(--red);
   border-radius: 50%;
@@ -1516,6 +1551,40 @@ h1 {
 
 .beer-video {
   object-fit: cover;
+}
+
+.thunder-feature {
+  margin: 0 0 clamp(56px, 8vw, 96px);
+  background: #010626;
+}
+
+.thunder-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thunder-visual {
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr 0.9fr;
+  grid-auto-rows: clamp(220px, 18vw, 320px);
+  gap: clamp(14px, 2vw, 28px);
+}
+
+.thunder-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: cover;
+  background: #010626;
+}
+
+.thunder-visual-large {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 
 .bonus-project {
@@ -2400,7 +2469,8 @@ h2 {
 
   .travel-visual,
   .hl-visual,
-  .beer-visual {
+  .beer-visual,
+  .thunder-visual {
     min-height: auto;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto;
@@ -2408,17 +2478,20 @@ h2 {
 
   .travel-visual > *,
   .hl-visual > *,
-  .beer-visual > * {
+  .beer-visual > *,
+  .thunder-visual > * {
     min-height: 260px;
   }
 
   .travel-collage-large,
   .beer-collage-large,
+  .thunder-visual-large,
   .hl-review,
   .hl-slide,
   .hl-dashboard,
   .hl-system,
-  .beer-visual > * {
+  .beer-visual > *,
+  .thunder-visual > * {
     grid-column: auto;
     grid-row: auto;
     width: 100%;
@@ -2704,6 +2777,7 @@ h2 {
   .travel-visual,
   .hl-visual,
   .beer-visual,
+  .thunder-visual,
   .freelance-gallery {
     grid-template-columns: 1fr;
   }
@@ -2726,6 +2800,7 @@ h2 {
   .travel-visual > *,
   .hl-visual > *,
   .beer-visual > *,
+  .thunder-visual > *,
   .freelance-gallery > * {
     min-height: 210px;
   }

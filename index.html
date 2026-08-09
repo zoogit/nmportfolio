@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=24" />
+  <link rel="stylesheet" href="styles.css?v=27" />
 </head>
 <body>
   <header class="site-header">
@@ -159,7 +159,7 @@
       </div>
 
       <div class="case-study-grid" role="tablist" aria-label="Case study menu">
-        <a class="case-study-card is-active" id="tab-hl" href="#panel-hl" role="tab" aria-selected="true" aria-controls="panel-hl" data-case-tab="hl" aria-label="Open HL case study">
+        <a class="case-study-card" id="tab-hl" href="#panel-hl" role="tab" aria-selected="false" aria-controls="panel-hl" data-case-tab="hl" aria-label="Open HL case study">
           <div class="case-study-card-media case-study-card-media-hl">
             <div class="hl-preview-grid" aria-label="Rotating HL presentation design samples">
               <img src="Assets/HL/0635623e-4dff-4182-bf93-328ae1078096_rw_1920.png" alt="HL presentation design sample" data-hl-preview />
@@ -186,7 +186,7 @@
           </div>
         </a>
 
-        <a class="case-study-card" id="tab-handbrewed" href="#panel-handbrewed" role="tab" aria-selected="false" aria-controls="panel-handbrewed" data-case-tab="handbrewed" aria-label="Open Hand Brewed Beer case study">
+        <a class="case-study-card is-active" id="tab-handbrewed" href="#panel-handbrewed" role="tab" aria-selected="true" aria-controls="panel-handbrewed" data-case-tab="handbrewed" aria-label="Open Hand Brewed Beer case study">
           <div class="case-study-card-media">
             <video src="Assets/HBB/hbb-video.mp4" autoplay muted loop playsinline aria-label="Hand Brewed Beer campaign video preview"></video>
             <span class="case-study-card-corner" aria-hidden="true"><img src="Assets/HBB/12.png" alt="" /></span>
@@ -194,6 +194,17 @@
           <div class="case-study-card-caption">
             <h3>Hand Brewed Beer <span>Graphic Designer and Brand Partner</span></h3>
             <p>Packaging, campaign visuals, merchandise, and brand support for an active craft brewery relationship.</p>
+          </div>
+        </a>
+
+        <a class="case-study-card" id="tab-thunder" href="#panel-thunder" role="tab" aria-selected="false" aria-controls="panel-thunder" data-case-tab="thunder" aria-label="Open Thunder in the Territories case study">
+          <div class="case-study-card-media">
+            <img src="Assets/TITT/case-study-cover.jpg" alt="Thunder in the Territories cover artwork" />
+            <span class="case-study-card-corner" aria-hidden="true"><img src="Assets/TITT/titt.png" alt="" /></span>
+          </div>
+          <div class="case-study-card-caption">
+            <h3>Thunder in the Territories <span>Creator, Game Designer, Art Director, Developer</span></h3>
+            <p>An original wrestling booking game conceived, art-directed, designed, and built as a full stack creative project.</p>
           </div>
         </a>
 
@@ -218,7 +229,7 @@
 
       <nav class="case-study-side-menu" aria-label="Switch case study">
         <p>Case studies</p>
-        <button class="case-study-side-link is-active" type="button" data-case-jump="hl" aria-pressed="true">
+        <button class="case-study-side-link" type="button" data-case-jump="hl" aria-pressed="false">
           <span>HL</span>
           <small>Design Manager</small>
         </button>
@@ -226,9 +237,13 @@
           <span>Master Template</span>
           <small>Founder & Designer</small>
         </button>
-        <button class="case-study-side-link" type="button" data-case-jump="handbrewed" aria-pressed="false">
+        <button class="case-study-side-link is-active" type="button" data-case-jump="handbrewed" aria-pressed="true">
           <span>Hand Brewed Beer</span>
           <small>Brand Partner</small>
+        </button>
+        <button class="case-study-side-link" type="button" data-case-jump="thunder" aria-pressed="false">
+          <span>Thunder in the Territories</span>
+          <small>Original Game</small>
         </button>
         <button class="case-study-side-link" type="button" data-case-jump="wanderluxe" aria-pressed="false">
           <span>WanderLuxe Tours</span>
@@ -240,7 +255,7 @@
         </button>
       </nav>
 
-      <div class="case-panel is-active" id="panel-hl" role="tabpanel" aria-labelledby="tab-hl" data-case-panel="hl">
+      <div class="case-panel" id="panel-hl" role="tabpanel" aria-labelledby="tab-hl" data-case-panel="hl" hidden>
         <div class="case-hero">
           <div class="case-brand" aria-label="HL case study">
             <img class="case-brand-logo" src="Assets/HL/HL1.png" alt="HL logo" />
@@ -420,7 +435,7 @@
         </div>
       </div>
 
-      <div class="case-panel" id="panel-handbrewed" role="tabpanel" aria-labelledby="tab-handbrewed" data-case-panel="handbrewed" hidden>
+      <div class="case-panel is-active" id="panel-handbrewed" role="tabpanel" aria-labelledby="tab-handbrewed" data-case-panel="handbrewed">
         <div class="case-hero">
           <div class="case-brand" aria-label="Hand Brewed Beer logo placeholder">
             <img class="case-brand-logo handbrewed-brand-logo" src="Assets/HBB/12.png" alt="Hand Brewed Beer logo" />
@@ -483,6 +498,68 @@
             <h3>Results</h3>
             <p>A relationship now past ten years and still active, the kind a brewery only renews when the work keeps performing. Across that decade I've built and maintained the entire brand ecosystem, from can labels and apparel to billboard campaigns, event posters, and social, keeping one voice across every surface the business touches.</p>
           </article>
+        </div>
+      </div>
+
+      <div class="case-panel" id="panel-thunder" role="tabpanel" aria-labelledby="tab-thunder" data-case-panel="thunder" hidden>
+        <div class="case-hero">
+          <div class="case-brand" aria-label="Thunder in the Territories case study">
+            <img class="case-brand-logo titt-brand-logo" src="Assets/TITT/titt.png" alt="Thunder in the Territories logo" />
+            <span>Creator, Game Designer, Art Director, Developer</span>
+          </div>
+          <h2>Designing and Building an Original Wrestling Game from the Ground Up</h2>
+          <p>Thunder in the Territories is an original game I conceived, designed, and am building myself. You play the booker of a classic wrestling promotion, engineering the gimmicks, feuds, and angles that send a crowd home happy.</p>
+        </div>
+
+        <div class="thunder-feature" aria-label="Thunder in the Territories featured image">
+          <img src="Assets/TITT/case-study-cover.jpg" alt="Thunder in the Territories game case study cover" />
+        </div>
+
+        <div class="website-portal phone-portal" aria-label="Thunder in the Territories website portal">
+          <div class="portal-topbar">
+            <span></span>
+            <span></span>
+            <span></span>
+            <a href="https://thunderwebsite.netlify.app/" target="_blank" rel="noreferrer">thunderwebsite.netlify.app</a>
+          </div>
+          <div class="portal-screen" aria-label="Thunder in the Territories website preview">
+            <a class="portal-image-link" href="https://thunderwebsite.netlify.app/" target="_blank" rel="noreferrer" aria-label="Open Thunder in the Territories website">
+              <img class="portal-fallback" src="Assets/TITT/case-study-cover.jpg" alt="Thunder in the Territories website preview" />
+            </a>
+            <iframe class="portal-live-site" src="https://thunderwebsite.netlify.app/" title="Thunder in the Territories website" loading="lazy"></iframe>
+          </div>
+        </div>
+
+        <div class="case-detail-tabs">
+          <div class="case-detail-menu" role="tablist" aria-label="Thunder in the Territories case study sections">
+            <button class="case-detail-tab is-active" id="thunder-subtab-concept" type="button" role="tab" aria-selected="true" aria-controls="thunder-subpanel-concept" data-detail-tab="thunder:concept">The Concept</button>
+            <button class="case-detail-tab" id="thunder-subtab-challenge" type="button" role="tab" aria-selected="false" aria-controls="thunder-subpanel-challenge" data-detail-tab="thunder:challenge">The Challenge</button>
+            <button class="case-detail-tab" id="thunder-subtab-approach" type="button" role="tab" aria-selected="false" aria-controls="thunder-subpanel-approach" data-detail-tab="thunder:approach">My Approach</button>
+            <button class="case-detail-tab" id="thunder-subtab-built" type="button" role="tab" aria-selected="false" aria-controls="thunder-subpanel-built" data-detail-tab="thunder:built">What I Built</button>
+          </div>
+
+          <article class="case-detail-panel is-active" id="thunder-subpanel-concept" role="tabpanel" aria-labelledby="thunder-subtab-concept" data-detail-panel="thunder:concept">
+            <h3>The Concept</h3>
+            <p>Every wrestling promotion lives or dies on story, so this game puts you in the booker's chair, pulling the strings behind the scenes rather than stepping into the ring. Bright, colorful, and addictive, it drops you into the late 70s and early 80s territory era with pixel art that feels nostalgic without feeling muddy and fun without feeling shallow.</p>
+          </article>
+          <article class="case-detail-panel" id="thunder-subpanel-challenge" role="tabpanel" aria-labelledby="thunder-subtab-challenge" data-detail-panel="thunder:challenge" hidden>
+            <h3>The Challenge</h3>
+            <p>Building a game solo means owning every layer at once. The visual identity had to evoke the 16-bit console era honestly while staying vivid and readable. The systems had to turn something as human as crowd heat and booking instinct into mechanics that are actually fun to play. And because the entire cast, promotion, and championship are invented from scratch, the world had to feel specific without leaning on real names, promotions, or likenesses.</p>
+          </article>
+          <article class="case-detail-panel" id="thunder-subpanel-approach" role="tabpanel" aria-labelledby="thunder-subtab-approach" data-detail-panel="thunder:approach" hidden>
+            <h3>My Approach</h3>
+            <p>I treated it the way I treat any brand build, starting from identity and letting it drive everything. I set an art direction rooted in territory-era artifacts, arena posters, marquee type, and vintage TV graphics, then executed the pixel art with tight palettes, chunky readable sprites, deliberate spotlight, and haze lighting. From there I designed the interface and underlying systems so the booker fantasy genuinely plays, then built it in code.</p>
+          </article>
+          <article class="case-detail-panel" id="thunder-subpanel-built" role="tabpanel" aria-labelledby="thunder-subtab-built" data-detail-panel="thunder:built" hidden>
+            <h3>What I Built</h3>
+            <p>Original game concept and design, full art direction and pixel-art execution, an invented cast of wrestlers, an original promotion identity, UI and interface design, and the working build itself. One coherent world, made solo, from first sketch to a game you can play.</p>
+          </article>
+        </div>
+
+        <div class="case-visual thunder-visual" aria-label="Thunder in the Territories gameplay and presentation visuals">
+          <img class="thunder-visual-large" src="Assets/TITT/mapslide.jpg" alt="Thunder in the Territories map gameplay shown on laptop mockup" />
+          <img src="Assets/TITT/324.JPG" alt="Thunder in the Territories card-booking gameplay screen" />
+          <img src="Assets/TITT/435.JPG" alt="Thunder in the Territories match result gameplay screen" />
         </div>
       </div>
 
@@ -679,6 +756,6 @@
     <p>Design leadership, brand systems, and creative operations.</p>
   </footer>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=13"></script>
 </body>
 </html>
