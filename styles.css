@@ -2153,6 +2153,69 @@ h2 {
   line-height: 1.5;
 }
 
+.ai-readable-index {
+  padding: clamp(72px, 10vw, 136px) var(--page-margin);
+  color: var(--deep-navy);
+  background: #f6f8fb;
+}
+
+.ai-readable-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+  gap: clamp(32px, 6vw, 86px);
+  align-items: end;
+  margin-bottom: clamp(34px, 5vw, 68px);
+}
+
+.ai-readable-heading h2 {
+  color: var(--deep-navy);
+}
+
+.ai-readable-heading p:last-child {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  line-height: 1.55;
+}
+
+.ai-readable-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.ai-readable-grid article {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+  border: 1px solid rgba(18, 31, 53, 0.16);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 32px);
+  background: #ffffff;
+}
+
+.ai-readable-grid h3 {
+  margin: 0;
+  color: var(--deep-navy);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  line-height: 1.08;
+}
+
+.ai-readable-grid p {
+  margin: 0;
+  color: var(--navy);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ai-readable-grid a {
+  margin-top: 4px;
+  color: var(--deep-navy);
+  font-weight: 900;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .dark-copy p,
 .site-footer p {
   margin: 0;
@@ -2308,7 +2371,9 @@ h2 {
   .section-heading,
   .about-grid,
   .contact,
-  .resume-grid {
+  .resume-grid,
+  .ai-readable-heading,
+  .ai-readable-grid {
     grid-template-columns: 1fr;
   }
 

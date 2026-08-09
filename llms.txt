@@ -5,6 +5,15 @@ Los Angeles, California
 
 Nima Maghame is a design manager and creative leader with over 15 years of experience across presentation design, branding, web design, UI/UX, front-end development, and AI-assisted workflow design. His work combines creative leadership, technical curiosity, operational thinking, and hands-on execution.
 
+## Current Positioning
+
+Nima combines design leadership, technical curiosity, and operational thinking to build systems, workflows, and digital experiences that improve both creative quality and team efficiency. He is strongest where creative direction, team leadership, workflow design, and hands-on making overlap.
+
+## Professional Experience
+
+- Houlihan Lokey, 2017-Present: Design Manager in Los Angeles. Nima now runs the LA office presentation design team after growing from leading the night team into a broader office-wide leadership role. He oversees creative quality, mentorship, workflow coordination, training, and process improvement for confidential, deadline-driven presentation work.
+- Results and operational proof: Supports 200-400 requests per month across regions while maintaining high standards for client-ready design. Built PNGMapper, a custom tool that turned 1,000-plus point map jobs from hours of manual work into minutes.
+
 ## Case Studies
 
 - HL: Design management, creative operations, workflow systems, and high-volume presentation design in a global financial environment. Nima now runs the LA office presentation design team after growing from leading the night team into a broader office-wide leadership role. Results include supporting 200-400 confidential requests per month and turning 1,000-plus point PNGMapper map jobs from hours of manual work into minutes. https://nimamaghame.com/work/hl/
@@ -14,7 +23,14 @@ Nima Maghame is a design manager and creative leader with over 15 years of exper
 - WanderLuxe Tours: Luxury travel brand identity, website design, UI/UX, responsive web design, and inquiry-flow work. https://nimamaghame.com/work/wanderluxe-tours/
 - Selected Projects: Freelance work across brand identity, digital design, campaigns, packaging, and production. https://nimamaghame.com/work/selected-projects/
 
+## Skills
+
+- Leadership: Design team management, creative direction, mentoring, quality control, workflow optimization, operational process improvement, stakeholder management, presentation storytelling.
+- Software and design: Figma, Adobe Photoshop, Illustrator, InDesign, After Effects, PowerPoint, Keynote, WordPress, HTML, CSS, JavaScript, React, Next.js.
+- AI and technical workflow: Prompt engineering, LLM workflow design, knowledge-base structuring, OpenAI API integration, AI-assisted coding, workflow automation, rapid prototyping.
+
 ## Canonical Pages
 
 - Home: https://nimamaghame.com/
+- Resume: https://nimamaghame.com/resume/
 - Case study index: https://nimamaghame.com/work/
