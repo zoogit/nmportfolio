@@ -1,0 +1,237 @@
+.design-system-page {
+  background: #ffffff;
+}
+
+.design-system-page .site-header {
+  position: relative;
+  align-items: center;
+}
+
+.design-system-page .brand {
+  flex: 0 0 auto;
+}
+
+.design-system-page .nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: clamp(18px, 2.2vw, 30px);
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+}
+
+.ds-hero,
+.ds-portal-section {
+  padding-left: var(--page-margin);
+  padding-right: var(--page-margin);
+}
+
+.ds-hero {
+  max-width: 1180px;
+  padding-top: clamp(72px, 10vw, 150px);
+  padding-bottom: clamp(80px, 11vw, 150px);
+}
+
+.ds-eyebrow {
+  margin: 0 0 18px;
+  color: var(--highlight);
+  font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.ds-hero h1 {
+  max-width: 980px;
+  font-size: clamp(4rem, 9vw, 8.75rem);
+  line-height: 0.94;
+}
+
+.ds-hero p:last-child {
+  max-width: 760px;
+  margin: 34px 0 0;
+  font-size: clamp(1.1rem, 1.55vw, 1.55rem);
+  font-weight: 300;
+  line-height: 1.45;
+}
+
+.ds-portal-section {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(34px, 5vw, 84px);
+  align-items: start;
+  padding-top: clamp(80px, 10vw, 136px);
+  padding-bottom: clamp(80px, 10vw, 136px);
+  border-top: 1px solid var(--line);
+}
+
+.ds-portal-section-thunder {
+  color: #ffffff;
+  background: #010626;
+  border-top: 0;
+}
+
+.ds-section-copy {
+  position: sticky;
+  top: 42px;
+}
+
+.ds-section-copy h2 {
+  max-width: 740px;
+  margin: 0;
+  font-size: clamp(2.75rem, 5.7vw, 6.75rem);
+  font-weight: 700;
+  line-height: 0.96;
+}
+
+.ds-section-copy > p:not(.ds-eyebrow) {
+  max-width: 620px;
+  margin: 28px 0 0;
+  font-size: clamp(1rem, 1.35vw, 1.3rem);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.ds-portal-section-thunder .ds-section-copy > p:not(.ds-eyebrow) {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ds-meta {
+  display: grid;
+  gap: 18px;
+  margin: 44px 0 0;
+}
+
+.ds-meta div {
+  display: grid;
+  gap: 5px;
+}
+
+.ds-meta dt {
+  color: var(--highlight);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.ds-portal-section-thunder .ds-meta dt,
+.ds-portal-section-thunder .ds-eyebrow {
+  color: #f2cd5c;
+}
+
+.ds-meta dd {
+  margin: 0;
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
+  font-weight: 300;
+}
+
+.ds-meta a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+}
+
+.ds-live-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.18);
+  text-decoration: none;
+}
+
+.ds-portal-section-thunder .ds-live-frame {
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.42);
+}
+
+.ds-live-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 420ms ease, filter 420ms ease;
+}
+
+.ds-live-frame span {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  padding: 0 18px;
+  color: #ffffff;
+  background: #000000;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.ds-portal-section-thunder .ds-live-frame span {
+  color: #010626;
+  background: #f2cd5c;
+}
+
+.ds-live-frame:hover img {
+  transform: scale(1.025);
+  filter: saturate(1.08);
+}
+
+@media (max-width: 900px) {
+  .design-system-page .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .design-system-page .nav {
+    display: flex;
+    width: auto;
+    position: static;
+    min-height: auto;
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .ds-portal-section {
+    grid-template-columns: 1fr;
+  }
+
+  .ds-section-copy {
+    position: static;
+  }
+
+  .ds-live-frame {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 640px) {
+  .design-system-page .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .design-system-page .nav {
+    justify-content: flex-start;
+    gap: 18px;
+    font-size: 1rem;
+  }
+
+  .ds-hero {
+    padding-top: 56px;
+  }
+
+  .ds-live-frame {
+    aspect-ratio: 3 / 4;
+  }
+
+  .ds-live-frame span {
+    right: 14px;
+    bottom: 14px;
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 0.78rem;
+  }
+}
