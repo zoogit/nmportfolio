@@ -120,10 +120,20 @@ dd {
 .design-system-portal img {
   display: block;
   width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.design-system-portal {
+  max-height: 560px;
+  overflow: auto;
+}
+
+.design-system-portal iframe {
+  display: block;
+  width: 100%;
   height: 560px;
   border: 0;
-  object-fit: cover;
-  object-position: top center;
 }
 
 @media (max-width: 760px) {
